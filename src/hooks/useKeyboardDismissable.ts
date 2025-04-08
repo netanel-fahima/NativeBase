@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BackHandler } from 'react-native';
 
 type IParams = {
@@ -27,7 +26,7 @@ export const keyboardDismissHandlerManager = {
  * Handles attaching callback for Escape key listener on web and Back button listener on Android
  */
 export const useKeyboardDismissable = ({ enabled, callback }: IParams) => {
-  React.useEffect(() => {
+  useEffect(() => {
     let cleanupFn = () => {};
     if (enabled) {
       cleanupFn = keyboardDismissHandlerManager.push(callback);
@@ -44,16 +43,20 @@ export const useKeyboardDismissable = ({ enabled, callback }: IParams) => {
 
 export function useBackHandler({ enabled, callback }: IParams) {
   useEffect(() => {
-    let backHandler = () => {
+    if (!enabled) return;
+
+    const handler = () => {
       callback();
       return true;
     };
-    if (enabled) {
-      BackHandler.addEventListener('hardwareBackPress', backHandler);
-    } else {
-      BackHandler.removeEventListener('hardwareBackPress', backHandler);
-    }
-    return () =>
-      BackHandler.removeEventListener('hardwareBackPress', backHandler);
+
+    const subscription = BackHandler.addEventListener(
+      'hardwareBackPress',
+      handler
+    );
+
+    return () => {
+      subscription.remove(); // ✅ הדרך החדשה להסיר את ההאזנה
+    };
   }, [enabled, callback]);
 }
