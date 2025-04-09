@@ -5,7 +5,7 @@ const baseStyle = (props: any) => {
     _focusVisible: {
       _web: {
         style: {
-          outlineWidth: '0',
+          outlineWidth: 0,
           boxShadow: `${primary[400]} 0px 0px 0px 2px`,
         },
       },
@@ -14,7 +14,7 @@ const baseStyle = (props: any) => {
       _focusVisible: {
         _web: {
           style: {
-            outlineWidth: '0',
+            outlineWidth: 0,
             boxShadow: `${primary[500]} 0px 0px 0px 2px`,
           },
         },

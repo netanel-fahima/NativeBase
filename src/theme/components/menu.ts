@@ -48,7 +48,7 @@ export const MenuItem = {
     px: 3,
     py: 2,
     _web: {
-      outlineWidth: '0',
+      outlineWidth: 0,
     },
     _stack: {
       alignItems: 'center',
@@ -79,7 +79,7 @@ export const MenuItem = {
     },
     _focusVisible: {
       _web: {
-        outlineWidth: '0',
+        outlineWidth: 0,
         style: { boxShadow: `none` },
         bg: 'muted.300',
       },
@@ -108,7 +108,7 @@ export const MenuItem = {
       },
       _focusVisible: {
         _web: {
-          outlineWidth: '0',
+          outlineWidth: 0,
           style: { boxShadow: `none` },
           bg: 'muted.600',
         },
