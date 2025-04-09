@@ -6,7 +6,7 @@ export const resolveStackStyleInput = (variant: any, color: any) => {
     };
   } else if (variant === 'unstyled') {
     return {
-      outlineWidth: 0,
+      outlineWidth: '0',
     };
   } else {
     return {

@@ -31,7 +31,7 @@ function variantGhost(props: Dict) {
   return {
     bg: 'transparent',
     _web: {
-      outlineWidth: 0,
+      outlineWidth: '0',
     },
     _hover: {
       bg: transparentize(
@@ -63,7 +63,7 @@ function variantOutline(props: Dict) {
       color: mode(`${colorScheme}.500`, `${colorScheme}.300`)(props),
     },
     _web: {
-      outlineWidth: 0,
+      outlineWidth: '0',
     },
     _hover: {
       bg: transparentize(
@@ -91,7 +91,7 @@ function variantSolid(props: Dict) {
   return {
     bg: `${colorScheme}.500`,
     _web: {
-      outlineWidth: 0,
+      outlineWidth: '0',
     },
     _disabled: {
       bg: mode(`trueGray.300`, `trueGray.600`)(props),

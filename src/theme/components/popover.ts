@@ -16,7 +16,7 @@ export const PopoverCloseButton = {
     bg: 'transparent',
     borderRadius: 'sm',
     _web: {
-      outlineWidth: 0,
+      outlineWidth: '0',
       cursor: 'pointer',
     },
     _icon: {

@@ -183,7 +183,7 @@ function unstyledStyle() {
     _invalid: {
       _stack: {
         style: {
-          outlineWidth: 0,
+          outlineWidth: '0',
         },
       },
     },
@@ -214,7 +214,7 @@ function underlinedStyle(props: InterfaceInputProps & { theme: any }) {
     _invalid: {
       _stack: {
         style: {
-          outlineWidth: 0,
+          outlineWidth: '0',
           boxShadow: `0 1px 0 0 ${error[600]}`,
         },
       },
@@ -232,7 +232,7 @@ function underlinedStyle(props: InterfaceInputProps & { theme: any }) {
       _invalid: {
         _stack: {
           style: {
-            outlineWidth: 0,
+            outlineWidth: '0',
             boxShadow: `0 1px 0 0 ${error[500]}`,
           },
         },

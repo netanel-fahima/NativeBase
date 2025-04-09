@@ -48,7 +48,7 @@ export const MenuItem = {
     px: 3,
     py: 2,
     _web: {
-      outlineWidth: 0,
+      outlineWidth: '0',
     },
     _stack: {
       alignItems: 'center',
